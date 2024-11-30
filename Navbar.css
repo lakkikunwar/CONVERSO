@@ -1,0 +1,62 @@
+.navbar {
+  height: 5rem; /* Slightly taller navbar */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 60px; /* Reduced vertical padding, kept horizontal padding */
+  background: rgba(179, 202, 219, 0.8);
+  backdrop-filter: blur(12px); /* Frosted glass effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10; /* Ensure it's above the Spline background */
+  border-bottom: 3px solid #187aaf; /* Slightly thicker border */
+}
+
+.navbar-logo h2 {
+  font-size: 2.5rem; /* Larger logo font size */
+  font-weight: bold;
+  color: #3d4f61;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  animation: slideInFromLeft 1s ease-out;
+  margin: 0; /* Removes unnecessary margins */
+  line-height: 1; /* Fixes any extra spacing issues */
+}
+
+.navbar-links {
+  display: flex;
+  gap: 30px; /* Increased gap between links */
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.nav-link {
+  color: #0a0646;
+  text-decoration: none;
+  font-size: 1.2rem; /* Slightly larger font size for links */
+  font-weight: 600; /* Slightly bolder text */
+  letter-spacing: 1.2px; /* Wider letter spacing */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #0d4993;
+  transform: scale(1.1);
+  text-shadow: 0 0 12px #5276bc, 0 0 25px #5276bc;
+}
+
+.nav-link:active {
+  transform: scale(1);
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

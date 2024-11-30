@@ -1,0 +1,767 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "hello": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "hey": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "hi": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "sup": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "yo": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "a,add,bill,new": {
+            "intent": "add.bill",
+            "domain": "default"
+          },
+          "a,bill,new,save": {
+            "intent": "add.bill",
+            "domain": "default"
+          },
+          "a,bill,creat,new": {
+            "intent": "add.bill",
+            "domain": "default"
+          },
+          "bill,display": {
+            "intent": "get.bills",
+            "domain": "default"
+          },
+          "bill,me,show": {
+            "intent": "get.bills",
+            "domain": "default"
+          },
+          "custom,detail,get": {
+            "intent": "get.customer",
+            "domain": "default"
+          },
+          "custom,detail,me,show": {
+            "intent": "get.customer",
+            "domain": "default"
+          },
+          "a,add,custom,new": {
+            "intent": "add.customer",
+            "domain": "default"
+          },
+          "a,creat,custom,new": {
+            "intent": "add.customer",
+            "domain": "default"
+          },
+          "custom,detail,save": {
+            "intent": "add.customer",
+            "domain": "default"
+          },
+          "customernam,for,newphon,phone,updat": {
+            "intent": "update.customer.phone",
+            "domain": "default"
+          },
+          "chang,customernam,for,newphon,phone": {
+            "intent": "update.customer.phone",
+            "domain": "default"
+          },
+          "contact,customernam,for,info,modifi,newphon": {
+            "intent": "update.customer.phone",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "greeting": "default",
+          "add.bill": "default",
+          "get.bills": "default",
+          "get.customer": "default",
+          "add.customer": "default",
+          "update.customer.phone": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "Hello",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "Hey",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "Hi",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "sup",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "yo",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "add a new bill",
+            "intent": "add.bill"
+          },
+          {
+            "domain": "default",
+            "utterance": "save a new bill",
+            "intent": "add.bill"
+          },
+          {
+            "domain": "default",
+            "utterance": "create a new bill",
+            "intent": "add.bill"
+          },
+          {
+            "domain": "default",
+            "utterance": "display bills",
+            "intent": "get.bills"
+          },
+          {
+            "domain": "default",
+            "utterance": "show me bills",
+            "intent": "get.bills"
+          },
+          {
+            "domain": "default",
+            "utterance": "get customer details",
+            "intent": "get.customer"
+          },
+          {
+            "domain": "default",
+            "utterance": "show me customer details",
+            "intent": "get.customer"
+          },
+          {
+            "domain": "default",
+            "utterance": "add a new customer",
+            "intent": "add.customer"
+          },
+          {
+            "domain": "default",
+            "utterance": "create a new customer",
+            "intent": "add.customer"
+          },
+          {
+            "domain": "default",
+            "utterance": "save customer details",
+            "intent": "add.customer"
+          },
+          {
+            "domain": "default",
+            "utterance": "update phone for [CustomerName], [NewPhone]",
+            "intent": "update.customer.phone"
+          },
+          {
+            "domain": "default",
+            "utterance": "change phone for [CustomerName], [NewPhone]",
+            "intent": "update.customer.phone"
+          },
+          {
+            "domain": "default",
+            "utterance": "modify contact info for [CustomerName], [NewPhone]",
+            "intent": "update.customer.phone"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "hello": 1,
+              "hey": 1,
+              "hi": 1,
+              "sup": 1,
+              "yo": 1,
+              "add": 1,
+              "a": 1,
+              "new": 1,
+              "bill": 1,
+              "save": 1,
+              "creat": 1,
+              "display": 1,
+              "show": 1,
+              "me": 1,
+              "get": 1,
+              "custom": 1,
+              "detail": 1,
+              "updat": 1,
+              "phone": 1,
+              "for": 1,
+              "customernam": 1,
+              "newphon": 1,
+              "chang": 1,
+              "modifi": 1,
+              "contact": 1,
+              "info": 1
+            },
+            "intents": {
+              "greeting": 1,
+              "add.bill": 1,
+              "get.bills": 1,
+              "get.customer": 1,
+              "add.customer": 1,
+              "update.customer.phone": 1
+            },
+            "intentFeatures": {
+              "greeting": {
+                "hello": 1,
+                "hey": 1,
+                "hi": 1,
+                "sup": 1,
+                "yo": 1
+              },
+              "add.bill": {
+                "add": 1,
+                "a": 1,
+                "new": 1,
+                "bill": 1,
+                "save": 1,
+                "creat": 1
+              },
+              "get.bills": {
+                "display": 1,
+                "bill": 1,
+                "show": 1,
+                "me": 1
+              },
+              "get.customer": {
+                "get": 1,
+                "custom": 1,
+                "detail": 1,
+                "show": 1,
+                "me": 1
+              },
+              "add.customer": {
+                "add": 1,
+                "a": 1,
+                "new": 1,
+                "custom": 1,
+                "creat": 1,
+                "save": 1,
+                "detail": 1
+              },
+              "update.customer.phone": {
+                "updat": 1,
+                "phone": 1,
+                "for": 1,
+                "customernam": 1,
+                "newphon": 1,
+                "chang": 1,
+                "modifi": 1,
+                "contact": 1,
+                "info": 1
+              }
+            },
+            "featuresToIntent": {
+              "hello": [
+                "greeting"
+              ],
+              "hey": [
+                "greeting"
+              ],
+              "hi": [
+                "greeting"
+              ],
+              "sup": [
+                "greeting"
+              ],
+              "yo": [
+                "greeting"
+              ],
+              "add": [
+                "add.bill",
+                "add.customer"
+              ],
+              "a": [
+                "add.bill",
+                "add.customer"
+              ],
+              "new": [
+                "add.bill",
+                "add.customer"
+              ],
+              "bill": [
+                "add.bill",
+                "get.bills"
+              ],
+              "save": [
+                "add.bill",
+                "add.customer"
+              ],
+              "creat": [
+                "add.bill",
+                "add.customer"
+              ],
+              "display": [
+                "get.bills"
+              ],
+              "show": [
+                "get.bills",
+                "get.customer"
+              ],
+              "me": [
+                "get.bills",
+                "get.customer"
+              ],
+              "get": [
+                "get.customer"
+              ],
+              "custom": [
+                "get.customer",
+                "add.customer"
+              ],
+              "detail": [
+                "get.customer",
+                "add.customer"
+              ],
+              "updat": [
+                "update.customer.phone"
+              ],
+              "phone": [
+                "update.customer.phone"
+              ],
+              "for": [
+                "update.customer.phone"
+              ],
+              "customernam": [
+                "update.customer.phone"
+              ],
+              "newphon": [
+                "update.customer.phone"
+              ],
+              "chang": [
+                "update.customer.phone"
+              ],
+              "modifi": [
+                "update.customer.phone"
+              ],
+              "contact": [
+                "update.customer.phone"
+              ],
+              "info": [
+                "update.customer.phone"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "hello",
+                "hey",
+                "hi",
+                "sup",
+                "yo",
+                "add",
+                "a",
+                "new",
+                "bill",
+                "save",
+                "creat",
+                "display",
+                "show",
+                "me",
+                "get",
+                "custom",
+                "detail",
+                "updat",
+                "phone",
+                "for",
+                "customernam",
+                "newphon",
+                "chang",
+                "modifi",
+                "contact",
+                "info"
+              ],
+              "intents": [
+                "greeting",
+                "add.bill",
+                "get.bills",
+                "get.customer",
+                "add.customer",
+                "update.customer.phone"
+              ],
+              "perceptrons": [
+                [
+                  5.723697185516357,
+                  5.741936206817627,
+                  5.732583999633789,
+                  5.72214937210083,
+                  5.710636138916016,
+                  -0.8266572952270508,
+                  -1.9768543243408203,
+                  -1.9768543243408203,
+                  -5.522522449493408,
+                  -1.5300828218460083,
+                  -0.7545943856239319,
+                  -3.0304672718048096,
+                  -1.6355544328689575,
+                  -1.6355544328689575,
+                  -1.578233003616333,
+                  -3.8491523265838623,
+                  -3.176987886428833,
+                  -0.7532402276992798,
+                  -1.4385980367660522,
+                  -2.1455256938934326,
+                  -2.1455256938934326,
+                  -2.1455256938934326,
+                  -0.6820023059844971,
+                  -0.7068815231323242,
+                  -0.7068815231323242,
+                  -0.7068815231323242,
+                  8.557307290081361
+                ],
+                [
+                  -0.05532003566622734,
+                  -0.0531221479177475,
+                  -0.051011379808187485,
+                  -0.04898429289460182,
+                  -0.047037575393915176,
+                  1.28680419921875,
+                  4.217574596405029,
+                  4.217574596405029,
+                  5.820067405700684,
+                  1.6045794486999512,
+                  1.2915821075439453,
+                  -4.310418128967285,
+                  -2.1964285373687744,
+                  -2.1964285373687744,
+                  -0.058606475591659546,
+                  -8.24032211303711,
+                  -0.1580749750137329,
+                  -0.034101977944374084,
+                  -0.07250488549470901,
+                  -0.1044081300497055,
+                  -0.1044081300497055,
+                  -0.1044081300497055,
+                  -0.024946441873908043,
+                  -0.020769909024238586,
+                  -0.020769909024238586,
+                  -0.020769909024238586,
+                  -1.4282166356696842
+                ],
+                [
+                  -0.6494512557983398,
+                  -0.644219160079956,
+                  -0.6394251585006714,
+                  -0.6357254981994629,
+                  -0.6327434778213501,
+                  -1.2595841884613037,
+                  -3.6773831844329834,
+                  -3.6773831844329834,
+                  7.937032222747803,
+                  -1.2264020442962646,
+                  -1.2071475982666016,
+                  5.747722148895264,
+                  2.8393714427948,
+                  2.8393714427948,
+                  -0.10047772526741028,
+                  -3.176210880279541,
+                  -3.110854387283325,
+                  -0.09492926299571991,
+                  -0.19473984837532043,
+                  -0.2889070212841034,
+                  -0.2889070212841034,
+                  -0.2889070212841034,
+                  -0.06902977079153061,
+                  -0.07009928673505783,
+                  -0.07009928673505783,
+                  -0.07009928673505783,
+                  0.6285231872494985
+                ],
+                [
+                  -0.1536944955587387,
+                  -0.1482572704553604,
+                  -0.14300841093063354,
+                  -0.13794153928756714,
+                  -0.13305054605007172,
+                  -0.6814888119697571,
+                  -1.393370509147644,
+                  -1.393370509147644,
+                  -4.51323127746582,
+                  -8.047415733337402,
+                  -0.6423413157463074,
+                  -0.05496291071176529,
+                  2.8156285285949707,
+                  2.8156285285949707,
+                  6.035200119018555,
+                  3.8517305850982666,
+                  5.262497901916504,
+                  -0.045245517045259476,
+                  -0.09860438108444214,
+                  -0.15895506739616394,
+                  -0.15895506739616394,
+                  -0.15895506739616394,
+                  -0.03396102413535118,
+                  -0.03699345514178276,
+                  -0.03699345514178276,
+                  -0.03699345514178276,
+                  -0.8201365649329102
+                ],
+                [
+                  -0.3158094882965088,
+                  -0.3048149347305298,
+                  -0.2941933274269104,
+                  -0.2839324176311493,
+                  -0.2740204334259033,
+                  3.0059804916381836,
+                  1.4304628372192383,
+                  1.4304628372192383,
+                  -8.101470947265625,
+                  6.033202648162842,
+                  3.0163893699645996,
+                  -0.0028105354867875576,
+                  -3.8281233310699463,
+                  -3.8281233310699463,
+                  -7.36381721496582,
+                  8.946879386901855,
+                  -0.5986436009407043,
+                  -0.10634145885705948,
+                  -0.22987671196460724,
+                  -0.33734074234962463,
+                  -0.33734074234962463,
+                  -0.33734074234962463,
+                  -0.07914711534976959,
+                  -0.06540941447019577,
+                  -0.06540941447019577,
+                  -0.06540941447019577,
+                  -0.5513150604142618
+                ],
+                [
+                  -0.3843155801296234,
+                  -0.37822943925857544,
+                  -0.37404540181159973,
+                  -0.37206733226776123,
+                  -0.3714185059070587,
+                  -0.12082026153802872,
+                  -0.3021225929260254,
+                  -0.3021225929260254,
+                  -0.49050173163414,
+                  -0.14314234256744385,
+                  -0.07419057935476303,
+                  -0.125229150056839,
+                  -0.1634056270122528,
+                  -0.1634056270122528,
+                  -0.10754495114088058,
+                  -0.3383258581161499,
+                  -0.2826249897480011,
+                  1.1530946493148804,
+                  2.318815231323242,
+                  3.478271007537842,
+                  3.478271007537842,
+                  3.478271007537842,
+                  1.16548752784729,
+                  1.1595691442489624,
+                  1.1595691442489624,
+                  1.1595691442489624,
+                  0.3720116151135557
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "Hello"
+      ],
+      [
+        "en",
+        "Hey"
+      ],
+      [
+        "en",
+        "Hi"
+      ],
+      [
+        "en",
+        "sup"
+      ],
+      [
+        "en",
+        "yo"
+      ],
+      [
+        "en",
+        "add a new bill"
+      ],
+      [
+        "en",
+        "save a new bill"
+      ],
+      [
+        "en",
+        "create a new bill"
+      ],
+      [
+        "en",
+        "display bills"
+      ],
+      [
+        "en",
+        "show me bills"
+      ],
+      [
+        "en",
+        "get customer details"
+      ],
+      [
+        "en",
+        "show me customer details"
+      ],
+      [
+        "en",
+        "add a new customer"
+      ],
+      [
+        "en",
+        "create a new customer"
+      ],
+      [
+        "en",
+        "save customer details"
+      ],
+      [
+        "en",
+        "update phone for [CustomerName], [NewPhone]"
+      ],
+      [
+        "en",
+        "change phone for [CustomerName], [NewPhone]"
+      ],
+      [
+        "en",
+        "modify contact info for [CustomerName], [NewPhone]"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "greeting": [
+          {
+            "answer": "I'm here to assist you. How can I help?"
+          },
+          {
+            "answer": "Hello! Ready to assist your business needs."
+          },
+          {
+            "answer": "Hello! How can I help you today?"
+          },
+          {
+            "answer": "Hi there! What can I do for you?"
+          }
+        ],
+        "add.bill": [
+          {
+            "answer": "Please provide the bill details in the format: [CustomerID], [TotalAmount], [PaymentStatus]"
+          }
+        ],
+        "get.bills": [
+          {
+            "answer": "Fetching your latest bills..."
+          }
+        ],
+        "get.customer": [
+          {
+            "answer": "Fetching customer details..."
+          }
+        ],
+        "add.customer": [
+          {
+            "answer": "Please provide the customer details in the format: [CustomerName], [Email (optional)], [Phone]"
+          }
+        ],
+        "update.customer.phone": [
+          {
+            "answer": "Updating the phone number..."
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}

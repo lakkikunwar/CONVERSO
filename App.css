@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+    height: 100vh;
+    background: linear-gradient(135deg, #2a2a72, #009ffd); 
+    animation: gradientBG 15s ease infinite;
+  }
+  
+  html {
+    scroll-behavior: smooth; 
+  }
+  
+  @keyframes gradientBG {
+    0% {
+      background-position: 100% 0%;
+    }
+    50% {
+      background-position: 0% 100%;
+    }
+    100% {
+      background-position: 100% 0%;
+    }
+  }
+  
